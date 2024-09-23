@@ -366,7 +366,7 @@ bool WriteDoubleQuotedString(ostream_wrapper& out, const std::string& str,
 
 bool WriteLiteralString(ostream_wrapper& out, const std::string& str,
                         std::size_t indent) {
-  out << "|\n";
+  out << "|+\n";
   int codePoint;
   for (std::string::const_iterator i = str.begin();
        GetNextCodePointAndAdvance(codePoint, i, str.end());) {
